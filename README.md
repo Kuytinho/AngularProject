@@ -1,27 +1,36 @@
-# AngularProject
+# Card Creator App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+Este é um projeto Angular para criar e visualizar cartas personalizadas. A aplicação permite criar cartas com nome, imagem e atributos de força, inteligência e beleza. As cartas são exibidas em uma lista abaixo do formulário de criação.
 
-## Development server
+## Funcionalidades
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Simula uma validação de login.
+- Criar cartas com nome, imagem e atributos de força, inteligência e beleza.
+- Validar as seguintes regras:
+  - O nome deve ter no máximo 10 letras.
+  - A soma dos atributos de força, inteligência e beleza deve ser no máximo 21.
+  - Não é permitido criar uma carta sem nome ou imagem.
+- Exibir mensagens de erro ao violar as regras de validação.
+- Salvar as cartas criadas no armazenamento local (localStorage).
+- Visualizar a lista de cartas criadas.
 
-## Code scaffolding
+## Instalação
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Certifique-se de ter o Node.js instalado em seu sistema.
+2. Faça o download ou clone o repositório deste projeto.
+3. Abra o terminal e navegue até o diretório do projeto.
+4. Execute o comando `npm install` para instalar as dependências do projeto.
 
-## Build
+## Execução
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Para executar o projeto em um servidor de desenvolvimento, execute o comando `ng serve` no terminal. Em seguida, abra o navegador e acesse `http://localhost:4200`.
+- A lógica de validação de login está comentada no arquivo login.component.ts, mas como não subi um banco de dados, o login deve ser feito com o username: 'admin' e a senha: 'senha123'
+- Para executar os testes, execute o comando `ng test` no terminal.
 
-## Running unit tests
+## Contribuição
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Contribuições são bem-vindas! Se você tiver sugestões de melhorias, correções de bugs ou novas funcionalidades, sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
-## Running end-to-end tests
+## Licença
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Este projeto está licenciado sob a licença [MIT](https://opensource.org/licenses/MIT).
