@@ -1,0 +1,50 @@
+/* Estilos globais do aplicativo */
+
+/* Defina uma fonte personalizada para todo o aplicativo */
+body {
+    font-family: "Arial", sans-serif;
+  }
+  
+  /* Centralize o conteúdo verticalmente */
+  .app-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Adicione um plano de fundo para o aplicativo */
+  .app-container {
+    background-color: #f0f0f0;
+  }
+  
+  /* Estilize os links do aplicativo */
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Defina um estilo padrão para os botões do aplicativo */
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Ajuste o tamanho máximo das imagens do aplicativo */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  

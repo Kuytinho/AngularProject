@@ -1,0 +1,46 @@
+<h1>Card Creator</h1>
+
+<div class="card-form">
+  <div class="input-container">
+    <label for="cardName">Nome:</label>
+    <input type="text" id="cardName" [(ngModel)]="cardName" />
+
+    <label for="cardImage">Imagem:</label>
+    <input type="text" id="cardImage" [(ngModel)]="cardImage" />
+
+    <label for="cardStrength">Força:</label>
+    <input type="number" id="cardStrength" [(ngModel)]="cardStrength" />
+
+    <label for="cardIntelligence">Inteligência:</label>
+    <input type="number" id="cardIntelligence" [(ngModel)]="cardIntelligence" />
+
+    <label for="cardBeauty">Beleza:</label>
+    <input type="number" id="cardBeauty" [(ngModel)]="cardBeauty" />
+  </div>
+
+  <button (click)="createCard()">Criar Carta</button>
+</div>
+
+
+
+<div class="warning" *ngIf="showNameWarning || showAttributesWarning || showMissingNameWarning || showMissingImageWarning">
+  <p *ngIf="showNameWarning">O nome deve ter no máximo 10 letras.</p>
+  <p *ngIf="showAttributesWarning">A soma dos atributos Força, Inteligência e Beleza deve ser no máximo 21.</p>
+  <p *ngIf="showMissingNameWarning">O nome do card é obrigatório.</p>
+  <p *ngIf="showMissingImageWarning">A imagem do card é obrigatória.</p>
+</div>
+
+
+<ul class="card-list">
+  <li class="card" *ngFor="let card of cardList">
+    <h2 class="card-header">{{ card.name }}</h2>
+    <div class="card-image">
+      <img [src]="card.image" alt="{{ card.name }}" />
+    </div>
+    <div class="card-details">
+      <p><strong>Força:</strong> {{ card.strength }}</p>
+      <p><strong>Inteligência:</strong> {{ card.intelligence }}</p>
+      <p><strong>Beleza:</strong> {{ card.beauty }}</p>
+    </div>
+  </li>
+</ul>
